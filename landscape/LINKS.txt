@@ -1,0 +1,34 @@
+ENV0 DATA LANDSCAPE — WHERE THE FILES ARE. THEY ARE ALL HERE.
+=============================================================
+Every path below is relative to this file's own folder. Nothing in this packet points outside it,
+and no location on any particular machine appears anywhere in it.
+
+  ecb/<NAME>_full.csv.gz            the thirteen ECB payment-statistics dumps of the frozen
+                                    snapshot ECB_PAYMENTS_SNAPSHOT_2026-07-10, one per dataset:
+                                      PAY PCN PCP PCT PDD PEM PIS PLB PMC PPC PTN PTT SSP
+                                    gzip-compressed CSV, as the ECB Data Portal serves them.
+  space/SPACE_2019_respondents.csv  the ECB SPACE respondent file, wave 2019
+  space/SPACE_2022_respondents.csv  the ECB SPACE respondent file, wave 2022
+  space/SPACE_2024_respondents.csv  the ECB SPACE respondent file, wave 2024 (public use file)
+  space/SPACE variables definitions wide file.xlsx    codebook for the 2019 wave
+  space/SPACE 2022 Codebook.xlsx                      codebook for the 2022 wave
+  space/SPACE 2024 Codebook.xlsx                      codebook for the 2024 wave
+
+  README.txt                        the canonical name of every dataset, its columns, and every
+                                    value that occurs, with the ECB's own label for each
+  ATTRIBUTION.txt                   who published these files, and on what footing they are here
+  codelists/                        the ECB codelists README.txt's generated section is built
+                                    from, with PROVENANCE.json recording where each was fetched
+
+POINT A CANDIDATE OR A GRADER AT THESE PATHS AND AT NOTHING ELSE. The ENV0 grader resolves the
+data through two settings and both take a path inside this folder:
+
+    ECB_SNAPSHOT_DATA        -> <this folder>/ecb
+    SPACE_2019_MICRODATA     -> <this folder>/space/SPACE_2019_respondents.csv
+    SPACE_2022_MICRODATA     -> <this folder>/space/SPACE_2022_respondents.csv
+    SPACE_2024_MICRODATA     -> <this folder>/space/SPACE_2024_respondents.csv
+
+BASELINE_DATA_ROOT is not needed and must not be set to anything outside this packet.
+
+The first build of this packet carried no data and this file named folders on the packet builder's
+own machine. It does not any more: the data is here, and every path above is relative.

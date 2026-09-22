@@ -1,0 +1,1560 @@
+{
+ "PAY": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PCN": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "CRD_FNCTN": {
+   "codelist": "CL_CRD_FNCTN",
+   "role": "dimension"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PYMNT_SCHM": {
+   "codelist": "CL_PYMNT_SCHM",
+   "role": "dimension"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PCP": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "CRD_FNCTN": {
+   "codelist": "CL_CRD_FNCTN",
+   "role": "dimension"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PYMNT_SCHM": {
+   "codelist": "CL_PYMNT_SCHM",
+   "role": "dimension"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "RMT_INTTN": {
+   "codelist": "CL_RMT_INTTN",
+   "role": "dimension"
+  },
+  "SCA": {
+   "codelist": "CL_SCA",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TRMNL_LCTN": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PCT": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PYMNT_SCHM": {
+   "codelist": "CL_PYMNT_SCHM",
+   "role": "dimension"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "RMT_INTTN": {
+   "codelist": "CL_RMT_INTTN",
+   "role": "dimension"
+  },
+  "SCA": {
+   "codelist": "CL_SCA",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PDD": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "CHNNL_CNSNT": {
+   "codelist": "CL_CHNNL_CNSNT",
+   "role": "dimension"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PYMNT_SCHM": {
+   "codelist": "CL_PYMNT_SCHM",
+   "role": "dimension"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PEM": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "RMT_INTTN": {
+   "codelist": "CL_RMT_INTTN",
+   "role": "dimension"
+  },
+  "SCA": {
+   "codelist": "CL_SCA",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PIS": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "RMT_INTTN": {
+   "codelist": "CL_RMT_INTTN",
+   "role": "dimension"
+  },
+  "SCA": {
+   "codelist": "CL_SCA",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PLB": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FRD_TYP": {
+   "codelist": "CL_FRD_TYP",
+   "role": "dimension"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "LBLTY_BRR": {
+   "codelist": "CL_LBLTY_BRR",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PMC": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "MRCHNT_CTGRY_CD": {
+   "codelist": "CL_MRCHNT_CTGRY_CD",
+   "role": "dimension"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RMT_INTTN": {
+   "codelist": "CL_RMT_INTTN",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TRMNL_LCTN": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PPC": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PSP_CTGRY": {
+   "codelist": "CL_SECTOR",
+   "role": "dimension"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TRMNL_LCTN": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PTN": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRMNL_FNCTN": {
+   "codelist": "CL_TRMNL_FNCTN",
+   "role": "dimension"
+  },
+  "TRMNL_LCTN": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "PTT": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_OBS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMMENT_TS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "CONF_STATUS": {
+   "codelist": "CL_CONF_STATUS",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DATA_COMP": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "INTTN_CHNNL": {
+   "codelist": "CL_INTTN_CHNNL",
+   "role": "dimension"
+  },
+  "METHOD_REF": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PRE_BREAK_VALUE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "RL_TRNSCTN": {
+   "codelist": "CL_RL_TRNSCTN",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TIME_PER_COLLECT": {
+   "codelist": "CL_TIME_COLLECT",
+   "role": "attribute"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TRANSFORMATION": {
+   "codelist": "CL_TRANSFORMATION",
+   "role": "dimension"
+  },
+  "TRMNL_LCTN": {
+   "codelist": "CL_AREA",
+   "role": "dimension"
+  },
+  "TYP_TRNSCTN": {
+   "codelist": "CL_TYP_TRNSCTN",
+   "role": "dimension"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MEASURE": {
+   "codelist": "CL_UNIT",
+   "role": "dimension"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ },
+ "SSP": {
+  "BREAKS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COLLECTION": {
+   "codelist": "CL_COLLECTION",
+   "role": "attribute"
+  },
+  "COMPILATION": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "COMPILING_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "COUNT_AREA": {
+   "codelist": "CL_AREA_EE",
+   "role": "dimension"
+  },
+  "COVERAGE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "CURRENCY_TRANS": {
+   "codelist": "CL_CURRENCY",
+   "role": "dimension"
+  },
+  "DATA_TYPE": {
+   "codelist": "CL_DATA_TYPE",
+   "role": "dimension"
+  },
+  "DECIMALS": {
+   "codelist": "CL_DECIMALS",
+   "role": "attribute"
+  },
+  "DISS_ORG": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "DOM_SER_IDS": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "FREQ": {
+   "codelist": "CL_FREQ",
+   "role": "dimension"
+  },
+  "NAT_TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_COM": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_CONF": {
+   "codelist": "CL_OBS_CONF",
+   "role": "attribute"
+  },
+  "OBS_PRE_BREAK": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "OBS_STATUS": {
+   "codelist": "CL_OBS_STATUS",
+   "role": "attribute"
+  },
+  "OBS_VALUE": {
+   "codelist": null,
+   "role": "measure"
+  },
+  "PUBL_ECB": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PUBL_MU": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "PUBL_PUBLIC": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "REF_AREA": {
+   "codelist": "CL_AREA_EE",
+   "role": "dimension"
+  },
+  "REF_SECTOR": {
+   "codelist": "CL_ESA95_SECTOR",
+   "role": "dimension"
+  },
+  "SERIES_DENOM": {
+   "codelist": "CL_SERIES_DENOM",
+   "role": "dimension"
+  },
+  "SOURCE_AGENCY": {
+   "codelist": "CL_ORGANISATION",
+   "role": "attribute"
+  },
+  "SSI_INDICATOR": {
+   "codelist": "CL_SSI_INDICATOR",
+   "role": "dimension"
+  },
+  "TIME_FORMAT": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TIME_PERIOD": {
+   "codelist": null,
+   "role": "timeDimension"
+  },
+  "TITLE": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "TITLE_COMPL": {
+   "codelist": null,
+   "role": "attribute"
+  },
+  "UNIT": {
+   "codelist": "CL_UNIT",
+   "role": "attribute"
+  },
+  "UNIT_MULT": {
+   "codelist": "CL_UNIT_MULT",
+   "role": "attribute"
+  }
+ }
+}

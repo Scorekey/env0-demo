@@ -1,0 +1,698 @@
+{
+ "_what_this_is": "The ECB codelists the landscape's ECB files use, fetched from the ECB Data Portal's SDMX 2.1 structure service and archived with the release. Ordered by the founder, 15 September 2026 (v3.4.1 item 9), and EXTENDED TO EVERY ENUMERATED COMPONENT -- attributes as well as dimensions -- by the architect, 16 September 2026 (v3.4.3 item 2). \u2605WHICH codelists is DERIVED: each dataflow's own data structure was asked first and the component-to-codelist map, with each component's role, is in COMPONENT_CODELISTS.json beside this note.",
+ "endpoint": "https://data-api.ecb.europa.eu/service/codelist/ECB/<CL_...>",
+ "structure_endpoint": "https://data-api.ecb.europa.eu/service/dataflow/ECB/<FLOW>?references=all",
+ "fetched_utc": "2026-09-16T06:25:54+00:00",
+ "files": [
+  {
+   "file": "CL_AREA.xml",
+   "codelist": "CL_AREA",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_AREA",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "944e754b6df3de9ac35ea5baf966427d",
+   "content_md5": "4329c6b16aa57bff99c710849e854462",
+   "bytes": 155540,
+   "codes": 906,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.COUNT_AREA",
+    "PAY.REF_AREA",
+    "PCN.REF_AREA",
+    "PCP.COUNT_AREA",
+    "PCP.REF_AREA",
+    "PCP.TRMNL_LCTN",
+    "PCT.COUNT_AREA",
+    "PCT.REF_AREA",
+    "PDD.COUNT_AREA",
+    "PDD.REF_AREA",
+    "PEM.COUNT_AREA",
+    "PEM.REF_AREA",
+    "PIS.COUNT_AREA",
+    "PIS.REF_AREA",
+    "PLB.COUNT_AREA",
+    "PLB.REF_AREA",
+    "PMC.COUNT_AREA",
+    "PMC.REF_AREA",
+    "PMC.TRMNL_LCTN",
+    "PPC.COUNT_AREA",
+    "PPC.REF_AREA",
+    "PPC.TRMNL_LCTN",
+    "PTN.REF_AREA",
+    "PTN.TRMNL_LCTN",
+    "PTT.COUNT_AREA",
+    "PTT.REF_AREA",
+    "PTT.TRMNL_LCTN"
+   ]
+  },
+  {
+   "file": "CL_AREA_EE.xml",
+   "codelist": "CL_AREA_EE",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_AREA_EE",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "547ff2cee9e0d8faf664b2f9c784d6c1",
+   "content_md5": "72072b256ecaa8c7c434654e213dd39d",
+   "bytes": 94699,
+   "codes": 555,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "SSP.COUNT_AREA",
+    "SSP.REF_AREA"
+   ]
+  },
+  {
+   "file": "CL_CHNNL_CNSNT.xml",
+   "codelist": "CL_CHNNL_CNSNT",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_CHNNL_CNSNT",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "f8bc38d2855f798e5f848078cebf36f1",
+   "content_md5": "33378a5a9cec84a73c0484b1ce996f35",
+   "bytes": 1524,
+   "codes": 4,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PDD.CHNNL_CNSNT"
+   ]
+  },
+  {
+   "file": "CL_COLLECTION.xml",
+   "codelist": "CL_COLLECTION",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_COLLECTION",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "62308f56fd7156e9229c738305af0714",
+   "content_md5": "df7c62e4cbd8eb8df4cdd58c8bb07b4b",
+   "bytes": 2424,
+   "codes": 10,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "SSP.COLLECTION"
+   ]
+  },
+  {
+   "file": "CL_CONF_STATUS.xml",
+   "codelist": "CL_CONF_STATUS",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_CONF_STATUS",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "b0dd9a455d998db4f0c309c660da0879",
+   "content_md5": "07e927ee76643d5ece69d3a8d050a45d",
+   "bytes": 3338,
+   "codes": 12,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "PAY.CONF_STATUS",
+    "PCN.CONF_STATUS",
+    "PCP.CONF_STATUS",
+    "PCT.CONF_STATUS",
+    "PDD.CONF_STATUS",
+    "PEM.CONF_STATUS",
+    "PIS.CONF_STATUS",
+    "PLB.CONF_STATUS",
+    "PMC.CONF_STATUS",
+    "PPC.CONF_STATUS",
+    "PTN.CONF_STATUS",
+    "PTT.CONF_STATUS"
+   ]
+  },
+  {
+   "file": "CL_CRD_FNCTN.xml",
+   "codelist": "CL_CRD_FNCTN",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_CRD_FNCTN",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "a0b376df493d4c3b404ba1d8b718014b",
+   "content_md5": "1b9a201a711f7face943cb5e9025cd01",
+   "bytes": 3399,
+   "codes": 15,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PCN.CRD_FNCTN",
+    "PCP.CRD_FNCTN"
+   ]
+  },
+  {
+   "file": "CL_CURRENCY.xml",
+   "codelist": "CL_CURRENCY",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_CURRENCY",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "dcbf1d4dceb499925406696828515469",
+   "content_md5": "d76d73b70d7911d2fe11311fdba01c2a",
+   "bytes": 69013,
+   "codes": 369,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "SSP.CURRENCY_TRANS"
+   ]
+  },
+  {
+   "file": "CL_DATA_TYPE.xml",
+   "codelist": "CL_DATA_TYPE",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_DATA_TYPE",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "58cdaf23cd3d24af7dee62f0c7c516f5",
+   "content_md5": "cdd6c5aff59eadb44148220c42a039d3",
+   "bytes": 7294,
+   "codes": 37,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "SSP.DATA_TYPE"
+   ]
+  },
+  {
+   "file": "CL_DECIMALS.xml",
+   "codelist": "CL_DECIMALS",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_DECIMALS",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "82c989c59112c9317e9b59280e6f0c18",
+   "content_md5": "f543ece4659ff6bd12e3943da93a3523",
+   "bytes": 3113,
+   "codes": 16,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "PAY.DECIMALS",
+    "PCN.DECIMALS",
+    "PCP.DECIMALS",
+    "PCT.DECIMALS",
+    "PDD.DECIMALS",
+    "PEM.DECIMALS",
+    "PIS.DECIMALS",
+    "PLB.DECIMALS",
+    "PMC.DECIMALS",
+    "PPC.DECIMALS",
+    "PTN.DECIMALS",
+    "PTT.DECIMALS",
+    "SSP.DECIMALS"
+   ]
+  },
+  {
+   "file": "CL_ESA95_SECTOR.xml",
+   "codelist": "CL_ESA95_SECTOR",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_ESA95_SECTOR",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "77a58df724e3a52844213c8bd1a50092",
+   "content_md5": "56df50c50d3ee648692502b0117c0873",
+   "bytes": 19226,
+   "codes": 97,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "SSP.REF_SECTOR"
+   ]
+  },
+  {
+   "file": "CL_FRD_TYP.xml",
+   "codelist": "CL_FRD_TYP",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_FRD_TYP",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "c919116123ac44108509ed3b70ef2c6d",
+   "content_md5": "840b53bf5a91bf149fbd3177df3d188b",
+   "bytes": 2894,
+   "codes": 12,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.FRD_TYP",
+    "PCP.FRD_TYP",
+    "PCT.FRD_TYP",
+    "PDD.FRD_TYP",
+    "PEM.FRD_TYP",
+    "PIS.FRD_TYP",
+    "PLB.FRD_TYP"
+   ]
+  },
+  {
+   "file": "CL_FREQ.xml",
+   "codelist": "CL_FREQ",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_FREQ",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "efa08c16ccbb709047fe57a9332992ca",
+   "content_md5": "ca67282d3cc696cc79723b36916e136b",
+   "bytes": 2355,
+   "codes": 10,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.FREQ",
+    "PCN.FREQ",
+    "PCP.FREQ",
+    "PCT.FREQ",
+    "PDD.FREQ",
+    "PEM.FREQ",
+    "PIS.FREQ",
+    "PLB.FREQ",
+    "PMC.FREQ",
+    "PPC.FREQ",
+    "PTN.FREQ",
+    "PTT.FREQ",
+    "SSP.FREQ"
+   ]
+  },
+  {
+   "file": "CL_INTTN_CHNNL.xml",
+   "codelist": "CL_INTTN_CHNNL",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_INTTN_CHNNL",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "218fdb959345a79679f350febc033ec2",
+   "content_md5": "53a29cbb5bf68b460784ceb61d7eed6a",
+   "bytes": 4686,
+   "codes": 22,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PCP.INTTN_CHNNL",
+    "PCT.INTTN_CHNNL",
+    "PDD.INTTN_CHNNL",
+    "PEM.INTTN_CHNNL",
+    "PPC.INTTN_CHNNL",
+    "PTN.INTTN_CHNNL",
+    "PTT.INTTN_CHNNL"
+   ]
+  },
+  {
+   "file": "CL_LBLTY_BRR.xml",
+   "codelist": "CL_LBLTY_BRR",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_LBLTY_BRR",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "bb45b054a55dcca62acac1ffa3161e41",
+   "content_md5": "b236e78a79c4d4fce714d00fbfa27d40",
+   "bytes": 1570,
+   "codes": 4,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PLB.LBLTY_BRR"
+   ]
+  },
+  {
+   "file": "CL_MRCHNT_CTGRY_CD.xml",
+   "codelist": "CL_MRCHNT_CTGRY_CD",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_MRCHNT_CTGRY_CD",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "985dca4e2c625d9f17875c6511ceb03e",
+   "content_md5": "b2957942abcda7c93d37275cd1d1c7ca",
+   "bytes": 64747,
+   "codes": 345,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PMC.MRCHNT_CTGRY_CD"
+   ]
+  },
+  {
+   "file": "CL_OBS_CONF.xml",
+   "codelist": "CL_OBS_CONF",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_OBS_CONF",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "203f4e0d75c0751d4e223987157605cd",
+   "content_md5": "5793c829b877967ec03e845081af270a",
+   "bytes": 3105,
+   "codes": 11,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "SSP.OBS_CONF"
+   ]
+  },
+  {
+   "file": "CL_OBS_STATUS.xml",
+   "codelist": "CL_OBS_STATUS",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_OBS_STATUS",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "9113d43fbb3c027b4980e252c9875dd5",
+   "content_md5": "df66ad0ee499782459bc269b2baf8964",
+   "bytes": 3889,
+   "codes": 19,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "PAY.OBS_STATUS",
+    "PCN.OBS_STATUS",
+    "PCP.OBS_STATUS",
+    "PCT.OBS_STATUS",
+    "PDD.OBS_STATUS",
+    "PEM.OBS_STATUS",
+    "PIS.OBS_STATUS",
+    "PLB.OBS_STATUS",
+    "PMC.OBS_STATUS",
+    "PPC.OBS_STATUS",
+    "PTN.OBS_STATUS",
+    "PTT.OBS_STATUS",
+    "SSP.OBS_STATUS"
+   ]
+  },
+  {
+   "file": "CL_ORGANISATION.xml",
+   "codelist": "CL_ORGANISATION",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_ORGANISATION",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "383d937195608ff2a8f7221920df227f",
+   "content_md5": "3c499c639b01cf78196f1c61e996081a",
+   "bytes": 190394,
+   "codes": 1044,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "PAY.COMPILING_ORG",
+    "PAY.DISS_ORG",
+    "PCN.COMPILING_ORG",
+    "PCN.DISS_ORG",
+    "PCP.COMPILING_ORG",
+    "PCP.DISS_ORG",
+    "PCT.COMPILING_ORG",
+    "PCT.DISS_ORG",
+    "PDD.COMPILING_ORG",
+    "PDD.DISS_ORG",
+    "PEM.COMPILING_ORG",
+    "PEM.DISS_ORG",
+    "PIS.COMPILING_ORG",
+    "PIS.DISS_ORG",
+    "PLB.COMPILING_ORG",
+    "PLB.DISS_ORG",
+    "PMC.COMPILING_ORG",
+    "PMC.DISS_ORG",
+    "PPC.COMPILING_ORG",
+    "PPC.DISS_ORG",
+    "PTN.COMPILING_ORG",
+    "PTN.DISS_ORG",
+    "PTT.COMPILING_ORG",
+    "PTT.DISS_ORG",
+    "SSP.COMPILING_ORG",
+    "SSP.DISS_ORG",
+    "SSP.SOURCE_AGENCY"
+   ]
+  },
+  {
+   "file": "CL_PYMNT_SCHM.xml",
+   "codelist": "CL_PYMNT_SCHM",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_PYMNT_SCHM",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "a52d9cc7c0eea4d301a939174dae7d90",
+   "content_md5": "d4d3d59c4031f6ce9e95c4dbd9dd4e4c",
+   "bytes": 165395,
+   "codes": 827,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PCN.PYMNT_SCHM",
+    "PCP.PYMNT_SCHM",
+    "PCT.PYMNT_SCHM",
+    "PDD.PYMNT_SCHM"
+   ]
+  },
+  {
+   "file": "CL_RL_TRNSCTN.xml",
+   "codelist": "CL_RL_TRNSCTN",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_RL_TRNSCTN",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "476ae9d7071d848fbcc5177e510c763c",
+   "content_md5": "3a83b797f4d82b7ce30876a510bce522",
+   "bytes": 1582,
+   "codes": 4,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.RL_TRNSCTN",
+    "PCP.RL_TRNSCTN",
+    "PCT.RL_TRNSCTN",
+    "PDD.RL_TRNSCTN",
+    "PEM.RL_TRNSCTN",
+    "PIS.RL_TRNSCTN",
+    "PLB.RL_TRNSCTN",
+    "PPC.RL_TRNSCTN",
+    "PTT.RL_TRNSCTN"
+   ]
+  },
+  {
+   "file": "CL_RMT_INTTN.xml",
+   "codelist": "CL_RMT_INTTN",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_RMT_INTTN",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "719c96abea1bab2f02ffb50b333bade9",
+   "content_md5": "0b8765505ebc69640680c8790167d4e8",
+   "bytes": 1410,
+   "codes": 3,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PCP.RMT_INTTN",
+    "PCT.RMT_INTTN",
+    "PEM.RMT_INTTN",
+    "PIS.RMT_INTTN",
+    "PMC.RMT_INTTN"
+   ]
+  },
+  {
+   "file": "CL_SCA.xml",
+   "codelist": "CL_SCA",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_SCA",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "7d22ce253eb0794c73869fa10ee69950",
+   "content_md5": "ee92f2cd3d17d50ee5573c0dfac23164",
+   "bytes": 3635,
+   "codes": 13,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PCP.SCA",
+    "PCT.SCA",
+    "PEM.SCA",
+    "PIS.SCA"
+   ]
+  },
+  {
+   "file": "CL_SECTOR.xml",
+   "codelist": "CL_SECTOR",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_SECTOR",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "b74286228dc077d7d7275b16a87e9aaa",
+   "content_md5": "288ee1d3f6a4f401290a8e69c9271000",
+   "bytes": 45372,
+   "codes": 239,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PPC.PSP_CTGRY"
+   ]
+  },
+  {
+   "file": "CL_SERIES_DENOM.xml",
+   "codelist": "CL_SERIES_DENOM",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_SERIES_DENOM",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "70183df9d946e5b5adc48eb6a7146b79",
+   "content_md5": "0bec0a50382526f4b0e7c6af0ebbf72b",
+   "bytes": 4987,
+   "codes": 26,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "SSP.SERIES_DENOM"
+   ]
+  },
+  {
+   "file": "CL_SSI_INDICATOR.xml",
+   "codelist": "CL_SSI_INDICATOR",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_SSI_INDICATOR",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "12fca6d6b370b11323c005425c674946",
+   "content_md5": "cc3134ee2f1ba8b38f3dff983bee9806",
+   "bytes": 4351,
+   "codes": 19,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "SSP.SSI_INDICATOR"
+   ]
+  },
+  {
+   "file": "CL_TIME_COLLECT.xml",
+   "codelist": "CL_TIME_COLLECT",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_TIME_COLLECT",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "7af89f9ed1592f83105fb564ce162e32",
+   "content_md5": "df7c62e4cbd8eb8df4cdd58c8bb07b4b",
+   "bytes": 2450,
+   "codes": 10,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "PAY.TIME_PER_COLLECT",
+    "PCN.TIME_PER_COLLECT",
+    "PCP.TIME_PER_COLLECT",
+    "PCT.TIME_PER_COLLECT",
+    "PDD.TIME_PER_COLLECT",
+    "PEM.TIME_PER_COLLECT",
+    "PIS.TIME_PER_COLLECT",
+    "PLB.TIME_PER_COLLECT",
+    "PMC.TIME_PER_COLLECT",
+    "PPC.TIME_PER_COLLECT",
+    "PTN.TIME_PER_COLLECT",
+    "PTT.TIME_PER_COLLECT"
+   ]
+  },
+  {
+   "file": "CL_TRANSFORMATION.xml",
+   "codelist": "CL_TRANSFORMATION",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_TRANSFORMATION",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "c69bc88cd01c2d8e16503cc8794ae54e",
+   "content_md5": "7fe73d8d4e7492e475ccff371b6ac149",
+   "bytes": 11513,
+   "codes": 58,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.TRANSFORMATION",
+    "PCP.TRANSFORMATION",
+    "PCT.TRANSFORMATION",
+    "PDD.TRANSFORMATION",
+    "PEM.TRANSFORMATION",
+    "PIS.TRANSFORMATION",
+    "PLB.TRANSFORMATION",
+    "PMC.TRANSFORMATION",
+    "PPC.TRANSFORMATION",
+    "PTT.TRANSFORMATION"
+   ]
+  },
+  {
+   "file": "CL_TRMNL_FNCTN.xml",
+   "codelist": "CL_TRMNL_FNCTN",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_TRMNL_FNCTN",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "dc21fa063ad610d66d23f5260eb8b247",
+   "content_md5": "cb222d8e084e447e4ec17c0d9e98de94",
+   "bytes": 2015,
+   "codes": 7,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PTN.TRMNL_FNCTN"
+   ]
+  },
+  {
+   "file": "CL_TYP_TRNSCTN.xml",
+   "codelist": "CL_TYP_TRNSCTN",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_TYP_TRNSCTN",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "0ea36d239e8a846b06d5d34870bf2de4",
+   "content_md5": "f52b00abda2c2d4b40835b50cb03fc9c",
+   "bytes": 6521,
+   "codes": 32,
+   "roles": [
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.TYP_TRNSCTN",
+    "PCP.TYP_TRNSCTN",
+    "PEM.TYP_TRNSCTN",
+    "PIS.TYP_TRNSCTN",
+    "PLB.TYP_TRNSCTN",
+    "PPC.TYP_TRNSCTN",
+    "PTT.TYP_TRNSCTN"
+   ]
+  },
+  {
+   "file": "CL_UNIT.xml",
+   "codelist": "CL_UNIT",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_UNIT",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "b8b22e8c78c5e18bdb1a8d014670e834",
+   "content_md5": "95de066c35daf0a0867b3833034fe7d7",
+   "bytes": 75046,
+   "codes": 441,
+   "roles": [
+    "attribute",
+    "dimension"
+   ],
+   "used_by": [
+    "PAY.UNIT",
+    "PAY.UNIT_MEASURE",
+    "PCN.UNIT",
+    "PCN.UNIT_MEASURE",
+    "PCP.UNIT",
+    "PCP.UNIT_MEASURE",
+    "PCT.UNIT",
+    "PCT.UNIT_MEASURE",
+    "PDD.UNIT",
+    "PDD.UNIT_MEASURE",
+    "PEM.UNIT",
+    "PEM.UNIT_MEASURE",
+    "PIS.UNIT",
+    "PIS.UNIT_MEASURE",
+    "PLB.UNIT",
+    "PLB.UNIT_MEASURE",
+    "PMC.UNIT",
+    "PMC.UNIT_MEASURE",
+    "PPC.UNIT",
+    "PPC.UNIT_MEASURE",
+    "PTN.UNIT",
+    "PTN.UNIT_MEASURE",
+    "PTT.UNIT",
+    "PTT.UNIT_MEASURE",
+    "SSP.UNIT"
+   ]
+  },
+  {
+   "file": "CL_UNIT_MULT.xml",
+   "codelist": "CL_UNIT_MULT",
+   "url": "https://data-api.ecb.europa.eu/service/codelist/ECB/CL_UNIT_MULT",
+   "fetched_utc": "2026-09-16T06:25:54+00:00",
+   "md5": "6099bca156168f5e2454cdae149b9704",
+   "content_md5": "f82443dac4eef577d30fc3c78afa4564",
+   "bytes": 5541,
+   "codes": 31,
+   "roles": [
+    "attribute"
+   ],
+   "used_by": [
+    "PAY.UNIT_MULT",
+    "PCN.UNIT_MULT",
+    "PCP.UNIT_MULT",
+    "PCT.UNIT_MULT",
+    "PDD.UNIT_MULT",
+    "PEM.UNIT_MULT",
+    "PIS.UNIT_MULT",
+    "PLB.UNIT_MULT",
+    "PMC.UNIT_MULT",
+    "PPC.UNIT_MULT",
+    "PTN.UNIT_MULT",
+    "PTT.UNIT_MULT",
+    "SSP.UNIT_MULT"
+   ]
+  }
+ ]
+}

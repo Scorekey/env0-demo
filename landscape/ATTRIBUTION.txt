@@ -1,0 +1,109 @@
+Source: ECB statistics.
+
+ATTRIBUTION — WHO PUBLISHED THE DATA IN THIS PACKET, AND ON WHAT TERMS IT IS HERE
+====================================================================================================
+
+Every data file under `ecb/` and `space/` was published by the EUROPEAN CENTRAL BANK. They are
+redistributed here UNMODIFIED, for evaluation use, with attribution to the European Central
+Bank. Each file's md5 is listed in section 3: the bytes in this packet are the bytes as
+published.
+
+The ECB is the source of the data. It has not reviewed, approved or endorsed this packet, the
+questions asked of it, or any result anyone derives from it.
+
+## 1. ECB PAYMENT STATISTICS — the ECB Data Portal
+
+   publisher   European Central Bank, ECB Data Portal (data.ecb.europa.eu)
+   obtained    from the Data Portal's SDMX 2.1 REST service, full dataset dumps
+   snapshot    ECB_PAYMENTS_SNAPSHOT_2026-07-10 — pulled 10 July 2026 and frozen on that date
+   form        gzip-compressed CSV, one file per dataflow, exactly as served
+   note        counts (UNIT_MEASURE=PN) and values (UNIT_MEASURE=EUR) are published in
+               millions; each row's TITLE column describes its own series
+
+   the thirteen dataflows, by the code the ECB gives them:
+
+     PAY   Payment statistics, all instruments             ecb/PAY_full.csv.gz
+     PCN   Payment cards in circulation                    ecb/PCN_full.csv.gz
+     PCP   Card payments                                   ecb/PCP_full.csv.gz
+     PCT   Credit transfers                                ecb/PCT_full.csv.gz
+     PDD   Direct debits                                   ecb/PDD_full.csv.gz
+     PEM   E-money payments                                ecb/PEM_full.csv.gz
+     PIS   Payment initiation services                     ecb/PIS_full.csv.gz
+     PLB   Losses due to fraud per liability bearer        ecb/PLB_full.csv.gz
+     PMC   Card payments by merchant category              ecb/PMC_full.csv.gz
+     PPC   Post office giro institutions                   ecb/PPC_full.csv.gz
+     PTN   Terminals provided by resident PSPs             ecb/PTN_full.csv.gz
+     PTT   Terminal transactions (ATM, POS)                ecb/PTT_full.csv.gz
+     SSP   Securities settlement / other PSP statistics    ecb/SSP_full.csv.gz
+
+## 2. ECB SPACE — the study on the payment attitudes of consumers in the euro area
+
+   publisher   European Central Bank
+   survey      SPACE, the study on the payment attitudes of consumers in the euro area
+   files       the respondent-level public use files of the 2019, 2022 and 2024 waves, with
+               the codebook the ECB publishes for each wave
+   note        the codes are WAVE-NATIVE and are not harmonised across waves; survey counts
+               are in units, not millions
+
+## 3. WHAT IS IN THIS PACKET, FILE BY FILE, WITH ITS md5
+
+   ★These are the md5s of the files as this packet carries them. Each one was checked against
+    the published file it was copied from, and all nineteen matched.
+
+     ecb/PAY_full.csv.gz                    8684000 bytes  257b276dd453b2c70781d4ffa388c309
+     ecb/PCN_full.csv.gz                     223375 bytes  b9cf6b6812a8d06855fc4b38b8e279bf
+     ecb/PCP_full.csv.gz                   16837599 bytes  69b9f54ccf585f6aa3ebb01058a33b53
+     ecb/PCT_full.csv.gz                    3121243 bytes  26a760bbedcf0da0214e129ae9b844de
+     ecb/PDD_full.csv.gz                    1324587 bytes  c04bcdfaddc7a99291e8a4d471e46d73
+     ecb/PEM_full.csv.gz                    1603362 bytes  7508a502e0ffa018e802507d02561a81
+     ecb/PIS_full.csv.gz                     205196 bytes  41c53e16e2fb1f8a04247592ac27a30d
+     ecb/PLB_full.csv.gz                      35400 bytes  42b698716d54b3a1debb5f5d4139a944
+     ecb/PMC_full.csv.gz                    6415455 bytes  e76933c25e62107b64c421b6cb2e0e89
+     ecb/PPC_full.csv.gz                    1955622 bytes  c548d2f1bc1f1f73e14c83b43be1eaa5
+     ecb/PTN_full.csv.gz                    1163306 bytes  1e3220c96cd138b13f41b9a5d5b18b1a
+     ecb/PTT_full.csv.gz                    7449519 bytes  f8d1d588d35d1582f26c8045e9426fec
+     ecb/SSP_full.csv.gz                     488480 bytes  4dbfdf5d012f78826ea66fe9ce4f1caf
+     space/SPACE_2019_respondents.csv      21362948 bytes  ef47bdc1b64533e419f47575b5b33679
+     space/SPACE_2022_respondents.csv      14791568 bytes  ed672d5415cb1e80a856fcdd3be41cfb
+     space/SPACE_2024_respondents.csv      38786904 bytes  edb4cfac2fe15e47451d0c02a58db68a
+     space/SPACE variables definitions wide file.xlsx       36879 bytes  6f271465c74c4d68b6168b25deb241b5
+     space/SPACE 2022 Codebook.xlsx           64517 bytes  84eda49c2717cb24c833390b506c8c64
+     space/SPACE 2024 Codebook.xlsx           60920 bytes  64e579eaefc8003ac301cd51a2ef2b59
+
+     TOTAL                                124610880 bytes  (118.84 MiB) over 19 file(s)
+
+## 4. THE TERMS THESE FILES ARE REUSED UNDER
+
+   The ESCB's "Policy regarding the reuse of ESCB statistics":
+   https://www.ecb.europa.eu/stats/ecb_statistics/governance_and_quality_framework/html/usage_policy.en.html
+
+   The policy, quoted:
+
+     "All publicly available ESCB statistics may be reused free of charge on the condition
+      that the source is quoted (e.g. "Source: ECB statistics.") and that the statistics
+      (including metadata) are not modified."
+
+   Reuse is in accordance with the respective disclaimers issued by the ECB, and the policy
+   notes that statistics may be changed as a result of revisions or other updates.
+
+   ★THIS PACKET MEETS BOTH CONDITIONS, AND HERE IS WHERE EACH ONE IS MET:
+
+     the source is quoted        "Source: ECB statistics." is the first line of this file
+                                 and the first line of landscape/README.txt.
+
+     nothing is modified         Every one of the nineteen files is byte-for-byte the file
+                                 the ECB published, and section 3 publishes each one's md5 so
+                                 that anyone can check it. ★This includes the METADATA the
+                                 policy names: the three SPACE codebooks carry Excel's own
+                                 `x15ac:absPath` entries, and they are left exactly as the ECB
+                                 saved them. Stripping them would modify the file.
+
+     the snapshot is dated       The ECB revises its statistics. These files are the snapshot
+                                 of 10 July 2026 and are named and dated as such; a figure
+                                 derived from them is a figure from that snapshot, not a claim
+                                 about what the ECB publishes today.
+
+====================================================================================================
+Source: ECB statistics. — ECB Data Portal payment statistics, snapshot of 10 July 2026, and
+the SPACE survey public use files, waves 2019, 2022 and 2024. Redistributed unmodified with
+attribution, for evaluation use, under the ESCB policy on the reuse of ESCB statistics.
