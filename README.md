@@ -54,7 +54,9 @@ message, the paper, then the menu; four tools (`list_dir`, `read_file`, `run_pyt
 (`--max-turns`). Transport errors are retried. A conversation the provider refuses with an HTTP 4xx
 is re-run once as a fresh conversation (the first is kept as `<paper>__attempt1`); a second 4xx
 stands as no submission. No temperature, seed or reasoning parameter is sent; on the Anthropic API,
-which requires `max_tokens`, the model's documented maximum is sent. It refuses to run if the packet does
+which requires `max_tokens`, the model's documented maximum is sent (the runner lists each figure
+with its source page). For a Claude model it holds no figure for, pass `--max-tokens N` with the
+model's documented maximum; RUN.json records it as operator-supplied. It refuses to run if the packet does
 not check against `MD5SUMS.txt`, if `SCOREKEY_MODEL_KEY` is unset, or if the sandbox would hold more
 than one paper. The key is read from that variable only and is never written.
 
@@ -87,7 +89,7 @@ The gpt-5.6 models refuse function tools on chat completions; use `--transport r
     run_env0_campaign.py      da47a0e373b9494233aa4f28ab9ac8fa   the campaign harness it is cut from
     tool loop (fenced region) 39504313a53c61b7a559002738ea9303   re-hashed at every start-up
     sandbox_exec_env1.py      7802cb28466280e9a84a8e651b6d88cd   the isolated runner, unchanged
-    run_demo.py               6f60cca27f19960cbc4d3bca338b99e4
+    run_demo.py               127052acc7baefdcf85c57b2c579221c
     submit_demo.py            e52bed001ff3965cc41661a30458136a
 
 `TOOLS_MD5SUMS.txt` lists this README and the three scripts; `MD5SUMS.txt` is the packet's own.

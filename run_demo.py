@@ -37,6 +37,8 @@ WHAT IT REFUSES, rather than degrading:
   * a missing SCOREKEY_MODEL_KEY (the API key comes from that environment variable and nowhere else;
     it is held in memory, sent in the request's auth header, and never written or logged);
   * a claude- model on a non-anthropic transport, or the reverse (as the campaign refused);
+  * a Claude model with neither a documented max-output row here nor an operator --max-tokens
+    (a supplied value is recorded in RUN.json as operator-supplied);
   * a packet whose MD5SUMS.txt does not check, or an MD5SUMS.txt that is not the one shipped;
   * a sandbox holding anything other than exactly one paper, and that paper this conversation's.
 
@@ -329,34 +331,52 @@ SAMPLING = ("DEFAULT - no temperature, top_p, seed, reasoning_effort, max_tokens
             "response_format is sent by this harness")
 
 #: Anthropic REQUIRES max_tokens and has no unset. The campaign sent each model's DOCUMENTED
-#: MAXIMUM, so that the cap is the same as no cap, and refused a model whose maximum it did not
-#: hold. The same rule here: a Claude model not in this table is refused, never given a guess.
+#: MAXIMUM, so that the cap is the same as no cap. Each row below carries the page it was read
+#: from. For a Claude model whose maximum is not documented here, the operator supplies it with
+#: --max-tokens and RUN.json records it as operator-supplied, with the value: the run is not
+#: refused, and the record says what was sent. --max-tokens is not accepted for a model that has a
+#: documented row, because the campaign sent the documented maximum and the record must too.
+_MODELS_TABLE_0919 = "https://platform.claude.com/docs/en/models/overview (read by the campaign, 2026-09-19)"
+_MODELS_TABLE_0922 = "https://platform.claude.com/docs/en/about-claude/models/overview (read 2026-09-22)"
+_MODELS_TABLE = "https://platform.claude.com/docs/en/models/overview (read 2026-09-22)"
 ANTHROPIC_MAX_OUTPUT = {
-    "claude-fable-5-1": 128000,             # the campaign's own row, read 2026-09-19
-    "claude-sonnet-4-6": 64000,
-    "claude-haiku-4-5-20251001": 64000,
-    "claude-opus-4-7": 128000,
-    "claude-opus-4-6": 128000,
-    "claude-sonnet-4-5-20250929": 64000,
-    "claude-opus-4-5-20251101": 64000,
-    "claude-opus-4-1-20250805": 32000,
+    #: model id                      (max_tokens, where the figure is printed)
+    "claude-fable-5-1":            (128000, _MODELS_TABLE_0919 + ": 'Max output: 128K tokens'"),
+    "claude-sonnet-4-6":           (64000,  _MODELS_TABLE_0922 + ": 'Max output' 64k tokens"),
+    "claude-haiku-4-5-20251001":   (64000,  _MODELS_TABLE_0922 + ": 'Max output' 64k tokens"),
+    "claude-opus-4-7":             (128000, _MODELS_TABLE_0922 + ": 'Max output' 128k tokens"),
+    "claude-opus-4-6":             (128000, _MODELS_TABLE_0922 + ": 'Max output' 128k tokens"),
+    "claude-sonnet-4-5-20250929":  (64000,  _MODELS_TABLE_0922 + ": 'Max output' 64k tokens"),
+    "claude-opus-4-5-20251101":    (64000,  _MODELS_TABLE_0922 + ": 'Max output' 64k tokens"),
+    "claude-opus-4-1-20250805":    (32000,  _MODELS_TABLE_0922 + ": 'Max output' 32k tokens"),
+    #: ★build 6.1
+    "claude-opus-5":               (128000, _MODELS_TABLE + ", Claude Opus 5 column: 'Max output | 128K tokens'; "
+                                            "also https://platform.claude.com/docs/en/models/opus-5/overview"),
+    "claude-sonnet-5":             (128000, _MODELS_TABLE + ", Claude Sonnet 5 column: 'Max output | 128K tokens'; "
+                                            "also https://platform.claude.com/docs/en/models/sonnet-5/overview"),
+    "claude-fable-5":              (128000, "https://platform.claude.com/docs/en/models/fable-5/overview "
+                                            "(read 2026-09-22): max output 128K tokens"),
+    "claude-opus-4-8":             (128000, "https://platform.claude.com/docs/en/models/opus-4-8/overview "
+                                            "(read 2026-09-22): max output 128K tokens"),
 }
-ANTHROPIC_MAX_OUTPUT_SOURCE = (
-    "claude-fable-5-1: platform.claude.com/docs/en/models/overview, read 2026-09-19 by the "
-    "campaign ('Max output: 128K tokens'). Every other row: platform.claude.com/docs/en/about-"
-    "claude/models/overview, read 2026-09-22 ('Max output' column; 128k read as 128000, 64k as "
-    "64000, 32k as 32000).")
+#: set by main() from --max-tokens, only for a model with no row above
+OPERATOR_MAX_TOKENS = None
 
 
 def anthropic_max_output(model):
-    """The documented maximum for this id, or a refusal. Never a fallback, never a default."""
-    v = ANTHROPIC_MAX_OUTPUT.get(model)
-    if not v:
-        raise SystemExit(
-            "★REFUSED: %r has no documented max-output figure in run_demo.py. Anthropic requires "
-            "max_tokens, and the campaign sent each model's documented maximum; starting would "
-            "mean inventing a cap. Known: %s." % (model, ", ".join(sorted(ANTHROPIC_MAX_OUTPUT))))
-    return int(v)
+    """-> (max_tokens, basis, source). The documented maximum for this id; else the operator's
+    --max-tokens, recorded as operator-supplied; else a refusal. Never a guess."""
+    row = ANTHROPIC_MAX_OUTPUT.get(model)
+    if row:
+        return int(row[0]), "documented", row[1]
+    if OPERATOR_MAX_TOKENS:
+        return int(OPERATOR_MAX_TOKENS), "operator-supplied", "--max-tokens %d" % OPERATOR_MAX_TOKENS
+    raise SystemExit(
+        "★NEEDS --max-tokens: %r has no documented max-output figure in run_demo.py. Anthropic "
+        "requires max_tokens and the campaign sent each model's documented maximum. Read the "
+        "model's maximum output from Anthropic's documentation and pass it as --max-tokens N; "
+        "RUN.json will record it as operator-supplied. Documented here: %s."
+        % (model, ", ".join(sorted(ANTHROPIC_MAX_OUTPUT))))
 
 
 class TimeoutStop(RuntimeError):
@@ -503,8 +523,10 @@ class Transport:
         tools = [{"name": x["function"]["name"],
                   "description": x["function"]["description"],
                   "input_schema": x["function"]["parameters"]} for x in body["tools"]]
-        mx = anthropic_max_output(body["model"])
+        mx, basis, src = anthropic_max_output(body["model"])
         self.meta["anthropic_max_tokens_sent"] = mx
+        self.meta["anthropic_max_tokens_basis"] = basis
+        self.meta["anthropic_max_tokens_source"] = src
         req = {"model": body["model"], "max_tokens": mx,
                "system": sys_joined, "messages": msgs,
                "tools": tools, "tool_choice": {"type": "auto"}}
@@ -630,9 +652,14 @@ class Transport:
                                    "not offered by this transport"),
                 "max_tokens_sent": (self.meta.get("anthropic_max_tokens_sent")
                                     if self.mode == "anthropic" else None),
-                "max_tokens_note": ("the DOCUMENTED MAXIMUM - this API requires the field and has "
-                                    "no unset, so the cap is the same as no cap; source: %s"
-                                    % ANTHROPIC_MAX_OUTPUT_SOURCE
+                "max_tokens_basis": (self.meta.get("anthropic_max_tokens_basis")
+                                     if self.mode == "anthropic" else None),
+                "max_tokens_note": (("the DOCUMENTED MAXIMUM - this API requires the field and "
+                                     "has no unset, so the cap is the same as no cap; source: %s"
+                                     if self.meta.get("anthropic_max_tokens_basis") == "documented"
+                                     else "OPERATOR-SUPPLIED (%s) - no documented maximum for "
+                                     "this model is held by run_demo.py")
+                                    % self.meta.get("anthropic_max_tokens_source")
                                     if self.mode == "anthropic" else "not sent"),
                 "sampling": SAMPLING}
         #: HC-019 (anthropic, chat): the re-request must be byte-identical to the first request
@@ -878,6 +905,9 @@ def main():
     ap.add_argument("--base-url", dest="base_url", default=None,
                     help="default: the provider endpoint for the chosen transport")
     ap.add_argument("--max-turns", type=int, default=120)
+    ap.add_argument("--max-tokens", type=int, default=None, dest="max_tokens",
+                    help="anthropic only, and only for a Claude model whose documented maximum "
+                         "output run_demo.py does not hold; recorded as operator-supplied")
     A = ap.parse_args()
     if A.base_url is None:
         A.base_url = {"chat": API_CHAT, "responses": API_RESPONSES,
@@ -904,8 +934,19 @@ def main():
         raise SystemExit("★REFUSED: model %r on --transport %s. A Claude model needs "
                          "--transport anthropic: the system prompt, the tool shape, the tool "
                          "results and max_tokens all differ." % (A.model, A.transport))
+    if A.max_tokens is not None:
+        if A.transport != "anthropic":
+            raise SystemExit("★REFUSED: --max-tokens is for --transport anthropic only; nothing "
+                             "else sends max_tokens.")
+        if A.model in ANTHROPIC_MAX_OUTPUT:
+            raise SystemExit("★REFUSED: --max-tokens with %r, whose documented maximum (%d) "
+                             "run_demo.py holds and sends, as the campaign did."
+                             % (A.model, ANTHROPIC_MAX_OUTPUT[A.model][0]))
+        if A.max_tokens < 1:
+            raise SystemExit("★REFUSED: --max-tokens must be a positive integer.")
+        globals()["OPERATOR_MAX_TOKENS"] = A.max_tokens
     if A.transport == "anthropic":
-        anthropic_max_output(A.model)            # refuses before any call if the max is unknown
+        mt_value, mt_basis, mt_source = anthropic_max_output(A.model)   # before any call
     key = os.environ.get(KEY_ENV, "").strip()
     if not key:
         raise SystemExit("★REFUSED: %s is not set. The model API key is read from that environment "
@@ -942,10 +983,9 @@ def main():
            "system_message": SYSTEM, "menu_intro": MENU_INTRO,
            "max_turns": A.max_turns,
            "sampling": "default - no sampling or reasoning parameter is sent by this harness",
-           "anthropic_max_tokens": (ANTHROPIC_MAX_OUTPUT.get(A.model)
-                                    if A.transport == "anthropic" else None),
-           "anthropic_max_tokens_source": (ANTHROPIC_MAX_OUTPUT_SOURCE
-                                           if A.transport == "anthropic" else None),
+           "anthropic_max_tokens": (mt_value if A.transport == "anthropic" else None),
+           "anthropic_max_tokens_basis": (mt_basis if A.transport == "anthropic" else None),
+           "anthropic_max_tokens_source": (mt_source if A.transport == "anthropic" else None),
            "papers": {}, "retries": [], "usage_total": {}}
     print("ENV0 DEMO · %s · %s (%s)" % (A.model, run["base_url_host"], A.transport), flush=True)
 
