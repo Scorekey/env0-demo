@@ -29,7 +29,7 @@ sixth returns `{"capped": true}`.
 
 ## Getting a token
 
-Email vm@scorekey.ai with the name of your lab.
+Email contact@scorekey.ai from your work address.
 
 ## Run it in two commands
 
