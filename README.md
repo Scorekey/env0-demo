@@ -44,9 +44,21 @@ repository alone. A lab that runs it gives its model what every model in the cam
     export SCOREKEY_TOKEN=<your scorer token>
     python3 submit_demo.py --answers runs/<name> --url https://scorekey-env0.fly.dev
 
-**Requirements.** Linux, run as root (a VM or a privileged container): the model's Python runs in a
-mount and PID namespace holding only its own paper and the data, and the runner refuses to start
-where it cannot make one. Python 3 standard library only; tested on 3.11.
+**Requirements.** Linux, run as root: the model's Python runs in a mount and PID namespace holding
+only its own paper and the data, and the runner refuses to start where it cannot make one. Python 3
+standard library only; tested on 3.11.
+
+**Where that works, and where it does not.** A VM works: WSL2, a cloud VM, a Fly machine. Hosted
+agent sandboxes (Codex's cloud sandbox among them) and most CI runners cannot create the namespaces,
+and the runner refuses there rather than scoring in a weaker sandbox. A container works only if it
+is started privileged:
+
+    docker run --privileged --rm -it -v "$PWD":/env0 -w /env0 \
+      -e SCOREKEY_MODEL_KEY -e SCOREKEY_TOKEN python:3.12-slim \
+      python3 run_demo.py --packet . --model <name> --out runs/<name>
+
+(`-e VAR` with no value passes the variable through from your shell, so the key is never in the
+command line.)
 
 **What the runner does.** One conversation per paper, in the order T3, T4, full chain; the system
 message, the paper, then the menu; four tools (`list_dir`, `read_file`, `run_python`,
@@ -59,6 +71,14 @@ with its source page). For a Claude model it holds no figure for, pass `--max-to
 model's documented maximum; RUN.json records it as operator-supplied. It refuses to run if the packet does
 not check against `MD5SUMS.txt`, if `SCOREKEY_MODEL_KEY` is unset, or if the sandbox would hold more
 than one paper. The key is read from that variable only and is never written.
+
+**The model gets the interpreter that runs the runner, and no packages of its own.** The sandbox
+holds this paper's files, the data and that interpreter; the runner installs nothing. The campaign's
+host carried the standard library only, so every model did the work with `csv`, `gzip` and `json`,
+and a model that reaches for pandas there gets an ImportError. ★A host with pandas, numpy or
+openpyxl already installed lends them to the model through the same interpreter, and the run is then
+not the campaign's run. To match the campaign, run on a bare interpreter — the `python:3.12-slim`
+container above, or a VM with nothing added to the system Python.
 
 It writes `runs/<name>/T3.json`, `T4.json` and `full-chain-from-T1.json` (the model's
 `submit_answer` bodies, exactly), `RUN.json` (model, endpoint host, transport, the md5s below, turns,
@@ -92,7 +112,15 @@ The gpt-5.6 models refuse function tools on chat completions; use `--transport r
     run_demo.py               127052acc7baefdcf85c57b2c579221c
     submit_demo.py            e52bed001ff3965cc41661a30458136a
 
-`TOOLS_MD5SUMS.txt` lists this README and the three scripts; `MD5SUMS.txt` is the packet's own.
+`TOOLS_MD5SUMS.txt` lists this README and the three scripts, and `md5sum -c TOOLS_MD5SUMS.txt`
+checks them as it stands. `MD5SUMS.txt` is the packet's own manifest, kept exactly as the packet
+shipped, so it lists the 64 files under a `packet/` prefix while they sit here at the repository
+root: `md5sum -c MD5SUMS.txt` therefore fails on every line until the prefix is stripped. Check it
+with
+
+    grep '  packet/' MD5SUMS.txt | sed 's#  packet/#  #' | md5sum -c -     # 64 OK
+
+`run_demo.py` does this check itself, against the same manifest, before it makes any call.
 
 **What differs from the campaign runs.** The data folder carries `landscape/ATTRIBUTION.txt` and
 one added line in `landscape/README.txt` (the ECB's terms of reuse, added for publication). Each
