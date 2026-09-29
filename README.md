@@ -84,8 +84,10 @@ It writes `runs/<name>/T2.json`, `T4.json` and `full-chain-from-T1.json` (the mo
 `submit_answer` bodies, exactly), `RUN.json` (model, endpoint host, transport, the md5s below, turns,
 how each paper finished, token usage), and the full response of every turn.
 
-`submit_demo.py` checks each answer is one JSON object with a `commitments` list before sending it,
-because every submission the scorer takes, scored or rejected, counts against your five per paper.
+`submit_demo.py` checks each answer is one JSON object carrying the key its own paper's answer
+template asks for — `selections` for T2, `commitments` for T4 and the full chain — before sending
+it, because every submission the scorer takes, scored or rejected, counts against your five per
+paper.
 It prints each response and saves it as `<paper>.response.json`.
 
 **Transport.** `--transport chat` (default) is an OpenAI-compatible `/v1/chat/completions`;
@@ -110,7 +112,7 @@ The gpt-5.6 models refuse function tools on chat completions; use `--transport r
     tool loop (fenced region) 39504313a53c61b7a559002738ea9303   re-hashed at every start-up
     sandbox_exec_env1.py      7802cb28466280e9a84a8e651b6d88cd   the isolated runner, unchanged
     run_demo.py               98db1b6e4c56cdf0301797892df26d61
-    submit_demo.py            c2f5abbd9428c9ee8255bc777739b30f
+    submit_demo.py            aa32eb7a440baa8eb4fff5b10b5b2ae9
 
 `TOOLS_MD5SUMS.txt` lists this README and the three scripts, and `md5sum -c TOOLS_MD5SUMS.txt`
 checks them as it stands. `MD5SUMS.txt` is this packet's own manifest — it was recut when T2

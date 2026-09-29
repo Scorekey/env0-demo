@@ -10,8 +10,9 @@ comes back, and saves it beside the answer as <task>.response.json.
 
 ★THE CHECK COMES FIRST, BECAUSE EVERY SUBMISSION SPENDS ONE OF FIVE. The scorer counts every
 submission it takes, scored or rejected, against the token's cap of five per task. So a file that
-is not one JSON object with a "commitments" list -- empty, text, truncated, a turn-cap run with no
-answer -- is refused HERE and never sent.
+is not one JSON object carrying the key its own paper's answer template shows -- `selections` for
+T2, `commitments` for T4 and the chain -- is refused HERE and never sent. So is an empty, text or
+truncated file, and a turn-cap run that produced no answer.
 
 Exit status: 0 all sent and answered; 1 one or more answers refused before sending, or a
 transport error; 3 HTTP 401 (unknown token: stops at once, nothing further is sent).
@@ -23,9 +24,16 @@ from pathlib import Path
 
 TASKS = ["T2", "T4", "full-chain-from-T1"]
 TOKEN_ENV = "SCOREKEY_TOKEN"
+#: the one key each paper's own answer template shows, and the type it shows it as. T2 asks for a
+#: set of ids per row, so its answer is `selections`, an object; T4 and the chain ask for figures,
+#: so theirs is `commitments`, a list. A check that asked every paper for `commitments` would
+#: refuse every valid T2 answer, which is what the first version of this file did.
+REQUIRED = {"T2": ("selections", dict),
+            "T4": ("commitments", list),
+            "full-chain-from-T1": ("commitments", list)}
 
 
-def check(path):
+def check(path, task):
     """-> (body_bytes, None) if the file may be sent, else (None, reason)."""
     if not path.is_file():
         return None, "no such file"
@@ -38,8 +46,10 @@ def check(path):
         return None, "not JSON (%s)" % str(e)[:120]
     if not isinstance(obj, dict):
         return None, "the JSON is a %s, not one object" % type(obj).__name__
-    if not isinstance(obj.get("commitments"), list):
-        return None, 'the object has no "commitments" list'
+    key, kind = REQUIRED[task]
+    if not isinstance(obj.get(key), kind):
+        return None, 'the object has no "%s" %s, which %s\'s answer template asks for' % (
+            key, "object" if kind is dict else "list", task)
     return raw, None
 
 
@@ -57,7 +67,7 @@ def main():
     status = 0
     for task in TASKS:
         f = d / ("%s.json" % task)
-        body, why = check(f)
+        body, why = check(f, task)
         if body is None:
             print("%-19s NOT SENT — %s: %s" % (task, f, why), flush=True)
             status = 1
