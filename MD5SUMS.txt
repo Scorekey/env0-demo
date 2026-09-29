@@ -1,12 +1,11 @@
 32484891b6b335286e2b84ff19a3d93e  packet/CHAIN_DELIVERY_README.md
-5acc305e8a47b0bfb864324683848364  packet/bundle_T2/README.txt
-dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_T2/menu_env0.json
-341084dce95066257ccab48a3eea6557  packet/bundle_T2/prompt_env0_T2.md
 8f782cefe75348f4dcbdc6f2bf9dc707  packet/bundle_T4/README.txt
 dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_T4/menu_env0.json
 f899cb6b5aee11998919e6f862483f91  packet/bundle_T4/prompt_env0_T4.md
 8ec6add7e3a63a70afdb12f8509c1f00  packet/bundle_chain_full-chain-from-T1/chain_full-chain-from-T1.md
 dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_chain_full-chain-from-T1/menu_env0.json
+5b2ac7a06881d599d107f606fa782f51  packet/bundle_chain_mid-start-from-T3/chain_mid-start-from-T3.md
+dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_chain_mid-start-from-T3/menu_env0.json
 50987af217845e1ec5edb40a1ce25543  packet/landscape/ATTRIBUTION.txt
 6af2c39e2cabf22c6904e0a0951d3a1e  packet/landscape/LINKS.txt
 e02240e614cfd478a3595bf6009800b8  packet/landscape/README.txt

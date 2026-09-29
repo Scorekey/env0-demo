@@ -43,7 +43,7 @@ WHAT IT REFUSES, rather than degrading:
   * a sandbox holding anything other than exactly one paper, and that paper this conversation's.
 
 WHAT IT WRITES
-  <out>/T2.json, T4.json, full-chain-from-T1.json   the submit_answer body of each paper, exactly
+  <out>/T4.json, full-chain-from-T1.json, mid-start-from-T3.json   each paper's submit_answer body, exactly
   <out>/RUN.json                                    model, endpoint host, transport, the three md5s,
                                                     turns, finished_by and token usage per paper
   <out>/raw/<task>/turn_NN.json, <out>/transcripts/<task>.jsonl   every response body and the turn log
@@ -56,10 +56,11 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.dont_write_bytecode = True
 
-#: the three papers of the demo packet, in campaign order, and nothing else (T2 replaced T3
-#: by the founder's ruling of 29 September 2026)
-TASKS = ["T2", "T4", "full-chain-from-T1"]
-CHAIN = ["full-chain-from-T1"]
+#: the three papers of the demo packet, in campaign order, and nothing else. The founder's ruling
+#: of 29 September 2026 (superseding that morning's): the station is T4, and the two chain spans are
+#: the end-to-end and the build from the plan.
+TASKS = ["T4", "full-chain-from-T1", "mid-start-from-T3"]
+CHAIN = ["full-chain-from-T1", "mid-start-from-T3"]
 
 
 def is_chain(station):
@@ -84,9 +85,9 @@ KEY_ENV = "SCOREKEY_MODEL_KEY"
 ENV1_LOOP_MD5 = "39504313a53c61b7a559002738ea9303"
 ISO_RUNNER_MD5 = "7802cb28466280e9a84a8e651b6d88cd"
 CAMPAIGN_HARNESS_MD5 = "da47a0e373b9494233aa4f28ab9ac8fa"
-#: the demo packet's own manifest (T2, T4 and the full chain; founder's ruling of 29 Sep 2026)
-PACKET_MANIFEST_MD5 = "3e812ca17cc66822888f8cc305a723c7"
-PACKET_FILES = 64
+#: the demo packet's own manifest (T4 and the two chain spans; founder's ruling of 29 Sep 2026)
+PACKET_MANIFEST_MD5 = "6f78872329031e6834f17866f1b036d8"
+PACKET_FILES = 63
 
 SYSTEM = ("You are a data analyst staffed on a client module. Your working folder is the "
           "current directory. Read the files you need, write and run Python to compute "

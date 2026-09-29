@@ -4,14 +4,14 @@
     export SCOREKEY_TOKEN=<your token>
     python submit_demo.py --answers runs/<name> --url https://scorekey-env0.fly.dev
 
-For each of T2, T4 and full-chain-from-T1, in that order: reads <answers>/<task>.json, CHECKS it,
+For each of T4, full-chain-from-T1 and mid-start-from-T3, in that order: reads <answers>/<task>.json, CHECKS it,
 POSTs it to <url>/score/<task> with the token in the X-ENV0-Key header, prints the response as it
 comes back, and saves it beside the answer as <task>.response.json.
 
 ★THE CHECK COMES FIRST, BECAUSE EVERY SUBMISSION SPENDS ONE OF FIVE. The scorer counts every
 submission it takes, scored or rejected, against the token's cap of five per task. So a file that
-is not one JSON object carrying the key its own paper's answer template shows -- `selections` for
-T2, `commitments` for T4 and the chain -- is refused HERE and never sent. So is an empty, text or
+is not one JSON object carrying the key its own paper's answer template shows -- `commitments` for
+all three papers in this packet -- is refused HERE and never sent. So is an empty, text or
 truncated file, and a turn-cap run that produced no answer.
 
 Exit status: 0 all sent and answered; 1 one or more answers refused before sending, or a
@@ -22,15 +22,16 @@ written or printed.
 import argparse, json, os, sys, urllib.error, urllib.request
 from pathlib import Path
 
-TASKS = ["T2", "T4", "full-chain-from-T1"]
+TASKS = ["T4", "full-chain-from-T1", "mid-start-from-T3"]
 TOKEN_ENV = "SCOREKEY_TOKEN"
-#: the one key each paper's own answer template shows, and the type it shows it as. T2 asks for a
-#: set of ids per row, so its answer is `selections`, an object; T4 and the chain ask for figures,
-#: so theirs is `commitments`, a list. A check that asked every paper for `commitments` would
-#: refuse every valid T2 answer, which is what the first version of this file did.
-REQUIRED = {"T2": ("selections", dict),
-            "T4": ("commitments", list),
-            "full-chain-from-T1": ("commitments", list)}
+#: the one key each paper's own answer template shows, and the type it shows it as, READ FROM THE
+#: PAPER IN THIS PACKET rather than assumed: `commitments`, a list, on all three of them — T4 and
+#: both chain spans ask for figures. (When T2 was in the packet its template asked for
+#: `selections`, an object, and a check that assumed `commitments` refused every valid T2 answer.
+#: The table is per paper for that reason.)
+REQUIRED = {"T4": ("commitments", list),
+            "full-chain-from-T1": ("commitments", list),
+            "mid-start-from-T3": ("commitments", list)}
 
 
 def check(path, task):
