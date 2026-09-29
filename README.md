@@ -3,7 +3,7 @@
 Source: ECB statistics.
 
 Three papers from ENV0, an evaluation of how a model works with published payment statistics, put
-here so that a lab can run its own model against them: **T3**, **T4** and **the full chain from
+here so that a lab can run its own model against them: **T2**, **T4** and **the full chain from
 T1**.
 
 This repository is the packet exactly as a lab receives it: the three prompt pages with their
@@ -16,13 +16,13 @@ There are no answer keys here; scoring is done by the service below.
 
     https://scorekey-env0.fly.dev
 
-    POST /score/T3
+    POST /score/T2
     POST /score/T4
     POST /score/full-chain-from-T1
 
 Send the submission JSON as the request body and your token in the `X-ENV0-Key` header:
 
-    curl -X POST -H "X-ENV0-Key: <your token>" --data-binary @T3.json https://scorekey-env0.fly.dev/score/T3
+    curl -X POST -H "X-ENV0-Key: <your token>" --data-binary @T2.json https://scorekey-env0.fly.dev/score/T2
 
 Each token may make **5 submissions per task**; a submission the scorer rejects counts. The
 sixth returns `{"capped": true}`.
@@ -60,7 +60,7 @@ is started privileged:
 (`-e VAR` with no value passes the variable through from your shell, so the key is never in the
 command line.)
 
-**What the runner does.** One conversation per paper, in the order T3, T4, full chain; the system
+**What the runner does.** One conversation per paper, in the order T2, T4, full chain; the system
 message, the paper, then the menu; four tools (`list_dir`, `read_file`, `run_python`,
 `submit_answer`); tool results cut at 24,000 characters; a cap of **120 turns** per paper
 (`--max-turns`). Transport errors are retried. A conversation the provider refuses with an HTTP 4xx
@@ -80,7 +80,7 @@ openpyxl already installed lends them to the model through the same interpreter,
 not the campaign's run. To match the campaign, run on a bare interpreter — the `python:3.12-slim`
 container above, or a VM with nothing added to the system Python.
 
-It writes `runs/<name>/T3.json`, `T4.json` and `full-chain-from-T1.json` (the model's
+It writes `runs/<name>/T2.json`, `T4.json` and `full-chain-from-T1.json` (the model's
 `submit_answer` bodies, exactly), `RUN.json` (model, endpoint host, transport, the md5s below, turns,
 how each paper finished, token usage), and the full response of every turn.
 
@@ -109,13 +109,13 @@ The gpt-5.6 models refuse function tools on chat completions; use `--transport r
     run_env0_campaign.py      da47a0e373b9494233aa4f28ab9ac8fa   the campaign harness it is cut from
     tool loop (fenced region) 39504313a53c61b7a559002738ea9303   re-hashed at every start-up
     sandbox_exec_env1.py      7802cb28466280e9a84a8e651b6d88cd   the isolated runner, unchanged
-    run_demo.py               127052acc7baefdcf85c57b2c579221c
-    submit_demo.py            e52bed001ff3965cc41661a30458136a
+    run_demo.py               98db1b6e4c56cdf0301797892df26d61
+    submit_demo.py            c2f5abbd9428c9ee8255bc777739b30f
 
 `TOOLS_MD5SUMS.txt` lists this README and the three scripts, and `md5sum -c TOOLS_MD5SUMS.txt`
-checks them as it stands. `MD5SUMS.txt` is the packet's own manifest, kept exactly as the packet
-shipped, so it lists the 64 files under a `packet/` prefix while they sit here at the repository
-root: `md5sum -c MD5SUMS.txt` therefore fails on every line until the prefix is stripped. Check it
+checks them as it stands. `MD5SUMS.txt` is this packet's own manifest — it was recut when T2
+replaced T3 — and it lists the 64 packet files under a `packet/` prefix while they sit here at the
+repository root: `md5sum -c MD5SUMS.txt` therefore fails on every line until the prefix is stripped. Check it
 with
 
     grep '  packet/' MD5SUMS.txt | sed 's#  packet/#  #' | md5sum -c -     # 64 OK

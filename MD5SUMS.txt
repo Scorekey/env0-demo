@@ -1,7 +1,7 @@
 32484891b6b335286e2b84ff19a3d93e  packet/CHAIN_DELIVERY_README.md
-8e3d8b769613e5bc52d182c5e0b49ddf  packet/bundle_T3/README.txt
-dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_T3/menu_env0.json
-cb8da0799747cfb643dfe127c246fc90  packet/bundle_T3/prompt_env0_T3.md
+5acc305e8a47b0bfb864324683848364  packet/bundle_T2/README.txt
+dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_T2/menu_env0.json
+341084dce95066257ccab48a3eea6557  packet/bundle_T2/prompt_env0_T2.md
 8f782cefe75348f4dcbdc6f2bf9dc707  packet/bundle_T4/README.txt
 dec42ba8725dfc6a8e0be02cef11605c  packet/bundle_T4/menu_env0.json
 f899cb6b5aee11998919e6f862483f91  packet/bundle_T4/prompt_env0_T4.md
@@ -62,8 +62,3 @@ f8d1d588d35d1582f26c8045e9426fec  packet/landscape/ecb/PTT_full.csv.gz
 ef47bdc1b64533e419f47575b5b33679  packet/landscape/space/SPACE_2019_respondents.csv
 ed672d5415cb1e80a856fcdd3be41cfb  packet/landscape/space/SPACE_2022_respondents.csv
 edb4cfac2fe15e47451d0c02a58db68a  packet/landscape/space/SPACE_2024_respondents.csv
-b3664edd2711fb1d43ba9be64639a3ad  service/README_SERVICE.md
-133623754e42852c739efe02d64adcf6  service/gate_battery_env0.py
-bb583ae9e541c4c94197a364377b2d6c  service/gate_control_env0.py
-f8cba7c2a35a508ca61025a0ab23d09c  service/needles_env0.py
-2d95d1dcea532d022f0b75d0b3dcb0ba  service/score_service_env0.py

@@ -1,4 +1,4 @@
-# ENV0-T3-DEFINE
+# ENV0-T2-SOURCEMAP
 
 ## Brief
 
@@ -17,45 +17,34 @@ These eight papers are worked ONE AT A TIME, in station order T1 to T8. A paper 
 
 ```json
 {
- "the datasets the build takes its numbers from, and their roles from T2": "PMC as the base, with PCP for Germany; SPACE_MICRO to the whole market",
- "survey non-response codes": "excluded from every denominator, per variable and per wave: [\"\", \"999997\", \"999998\", \"999999\", \"NA\"] on PURPOSE, [\"\", \"999997\", \"999998\", \"999999\", \"NA\"] on INSTRUMENT in the 2024 wave"
+ "the module's structure from T1, to be used as it stands": [
+  "consumers resident in the country, buying physical goods online, from sellers in the country and from sellers abroad",
+  "five separate builds, each reported on its own"
+ ]
 }
 ```
 
 ## The task
 
-Pin every dimension of each input to the one value the build reads for 2024, and classify every code the build reads. The columns are not listed; pin them all.
+Examine every dataset in the landscape and settle the module's sourcing for all five countries: which datasets each country's market is built from. No figures are required; the sourcing is the deliverable.
 
 ## Questions
 
-- Q1 · PIN, scored one PICK_ONE per column. For each of the five datasets, the value of every dimension at which the build reads it. Answer object: one address per dataset (full pins). A column omitted is a miss; a column the dataset does not carry is an address that does not exist and is charged.
-
-- Q2 · PICK_ONE per code. For each merchant category the card source names, which class is it? Options: GOODS, DIGITAL, FUEL, SERVICES, MONEY. rows: the 58 MRCHNT_CTGRY_CD values of the card source, other than 5300, 5450, 5720, 5980, 7011, G000, GFUE, GTRV, which the menu publishes and which are not rows of this question.
-
-- Q4 · PICK_ONE per code. In the survey wave the build reads, for each purpose code: physical goods (P1), or not (P2)? rows: the 15 PURPOSE values of that wave, other than NA, 999997, 999998, 999999, which the menu publishes and which are not rows of this question.
-
-- Q5 · PICK_ONE per code. In the survey wave the build reads, for each payment-method code: already inside the base count (I1), or not (I2)? rows: the 12 INSTRUMENT values of that wave, other than NA, 999998, 999999, which the menu publishes and which are not rows of this question.
+- Q1 · SELECT_SET per country. For each country, which datasets do you build the market from? rows: FR · DE · ES · IT · NL
 
 ## Choose from
 
-**Q2 the class of each merchant category**
+**universe for Q1**
 
-GOODS, DIGITAL, FUEL, SERVICES, MONEY
+PAY, PCN, PCP, PCT, PDD, PEM, PIS, PLB, PMC, PPC, PTN, PTT, SPACE, SPACE_MICRO, SSP
 
-**Q4 purpose codes that are physical goods**
+**Q1 the datasets each country's market is built from**
 
-- **P1** physical goods
-- **P2** not physical goods
-
-**Q5 payment-method codes already inside the base count**
-
-- **I1** already inside the base count
-- **I2** not inside it
+the datasets listed under **universe for Q1** above; answer with those names
 
 ## Answer form
 
-- **commitments**: Q1: one extraction per dataset, every column that dataset carries pinned to one menu value (TIME_PERIOD included)
-- **assignments**: Q2, Q4, Q5: one option per row, keyed by code
+- **selections**: Q1 the datasets each country's market is built from: one set per country, keyed by country code
 
 ## Instructions
 
@@ -73,16 +62,13 @@ Statuses: SUPPRESSED, NO_OBSERVATION, NOT_IN_DATASET, ZERO, INSUFFICIENT_SAMPLE
 
 ```json
 {
- "assignments": {
-  "<the decision, exactly as it is headed under Choose from>": "<option id>  (or, per row: {\"<row>\": \"<option id>\"})"
- },
- "commitments": [
-  {
-   "dataset": "<file>",
-   "pins": {
-    "<column>": "<value>"
-   }
+ "selections": {
+  "<a set asked PER ROW, exactly as it is headed under Choose from>": {
+   "<row>": [
+    "<id>",
+    "..."
+   ]
   }
- ]
+ }
 }
 ```

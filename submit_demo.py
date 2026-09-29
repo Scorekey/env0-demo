@@ -4,7 +4,7 @@
     export SCOREKEY_TOKEN=<your token>
     python submit_demo.py --answers runs/<name> --url https://scorekey-env0.fly.dev
 
-For each of T3, T4 and full-chain-from-T1, in that order: reads <answers>/<task>.json, CHECKS it,
+For each of T2, T4 and full-chain-from-T1, in that order: reads <answers>/<task>.json, CHECKS it,
 POSTs it to <url>/score/<task> with the token in the X-ENV0-Key header, prints the response as it
 comes back, and saves it beside the answer as <task>.response.json.
 
@@ -21,7 +21,7 @@ written or printed.
 import argparse, json, os, sys, urllib.error, urllib.request
 from pathlib import Path
 
-TASKS = ["T3", "T4", "full-chain-from-T1"]
+TASKS = ["T2", "T4", "full-chain-from-T1"]
 TOKEN_ENV = "SCOREKEY_TOKEN"
 
 
