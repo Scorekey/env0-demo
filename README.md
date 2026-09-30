@@ -46,6 +46,7 @@ those runs was given.
 
     export SCOREKEY_MODEL_KEY=<your model API key>
     python3 run_demo.py --packet . --model <name> --out runs/<name>
+        # gpt models: add --transport responses; see the transport table
 
     export SCOREKEY_TOKEN=<your scorer token>
     python3 submit_demo.py --answers runs/<name> --url https://scorekey-env0.fly.dev
@@ -62,6 +63,7 @@ is started privileged:
     docker run --privileged --rm -it -v "$PWD":/env0 -w /env0 \
       -e SCOREKEY_MODEL_KEY -e SCOREKEY_TOKEN python:3.12-slim \
       python3 run_demo.py --packet . --model <name> --out runs/<name>
+        # gpt models: add --transport responses; see the transport table
 
 (`-e VAR` with no value passes the variable through from your shell, so the key is never in the
 command line.)
